@@ -5,3 +5,6 @@ C:\Users\Cypher\Desktop\Componentes_Multi_Nodo\comMatrizRiesgo\SolvePuzzle\Solve
 C:\Users\Cypher\Desktop\Componentes_Multi_Nodo\comMatrizRiesgo\SolvePuzzle\SolvePuzzle\obj\Debug\SolvePuzzle.pdb
 C:\Users\Cypher\Desktop\SolvePuzzle\SolvePuzzle\obj\Debug\SolvePuzzle.exe
 C:\Users\Cypher\Desktop\SolvePuzzle\SolvePuzzle\obj\Debug\SolvePuzzle.pdb
+C:\Users\Cypher\Desktop\SolvePuzzle\SolvePuzzle\bin\Debug\SolvePuzzle.exe
+C:\Users\Cypher\Desktop\SolvePuzzle\SolvePuzzle\bin\Debug\SolvePuzzle.pdb
+C:\Users\Cypher\Desktop\SolvePuzzle\SolvePuzzle\obj\Debug\SolvePuzzle.csprojResolveAssemblyReference.cache

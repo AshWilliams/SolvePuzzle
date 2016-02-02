@@ -7,31 +7,43 @@ namespace SolvePuzzle
 {
     class Program
     {
-        static int solvePuzzle(int num){
+        static string solvePuzzle(int num){
             Dictionary<int,int> myDick = new Dictionary<int,int>();
             myDick.Add(0, 1);           
             myDick.Add(4, 1);            
             myDick.Add(6, 1);            
             myDick.Add(8, 2);
             myDick.Add(9, 1);
-            List<int> listOfInts = new List<int>();
-            while (num > 0)
+            try
             {
-                listOfInts.Add(num % 10);
-                num = num / 10;
-            }
-            listOfInts.Reverse();
-            int cont = 0;
-            foreach (int n in listOfInts) // Loop through List with foreach.
-            {
-                int valor = 0;
-                if (myDick.ContainsKey(n)) { 
-                    myDick.TryGetValue(n,out valor);
-                    cont = cont + valor;
+                if (num > 0)
+                {
+                    int cont = 0;
+                    string aux = num.ToString();
+                    while (num > 0)
+                    {
+                        int valor = 0;
+                        int digito = num % 10;
+                        if (myDick.ContainsKey(digito))
+                        {
+                            myDick.TryGetValue(digito, out valor);
+                            cont = cont + valor;
+                        }
+                        num = num / 10;
+                    }
+
+                    return aux + "=" + cont.ToString();
+                }
+                else {
+                    return "Parámetro debe ser mayor a cero";
                 }
             }
- 
-            return cont;
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+            
         }
 
 
@@ -39,6 +51,8 @@ namespace SolvePuzzle
         {
             Console.WriteLine(solvePuzzle(346));
             Console.WriteLine(solvePuzzle(98));
+            Console.WriteLine(solvePuzzle(0));
+            Console.ReadKey();
         }
     }
 }
